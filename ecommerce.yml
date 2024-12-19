@@ -1,6 +1,6 @@
 token:
   expiration_time: 86400000
-  secret: userToken
+  secret: 01234567890123456789012345678901234567890123456789112312
 
 gateway:
   ip: 192.168.0.8

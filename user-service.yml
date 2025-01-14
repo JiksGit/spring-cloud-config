@@ -1,3 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    # password: 1234
+    password: '{cipher}AQAQs/QhFW6g5iTJ7sqtqtnspSvJj16hUlQp28NXRpsnvX6T3w5BikxTbMabYc3QdQXOyXFgKxetnsAZ/QMtEa4uYFTI3evLRTkc5AvqQDCw1slvaZIXIBJZWA1wrCtGA7gJAz8uPVOZ44FpDJ8G/FIxU+yOjRWNIyec8/crP1SmHBv3A5gptNIhzP4rkjBnxWxcDo0iJUVxld0RNeFpo6/beerzjYg+XKFbnrpRA5+g1kzkUDX/HcPtOUz/aNFWUr9grPNaSVTRqQ+nbLgqKCo794+mtX8OveHBbnPKBUL/KLSZuSTaGCWvoYvUqI+ow3otpPis6xCzZ1fmzGDl7jbsAeJbI1GsEwvYC3Vc5CpnqK1dujEe3JUfECiqLXsq15Q='
+
 token:
   expiration_time: 86400000
   # secret: '{cipher}AQAkCBlg3PFonqIz8d6wx9qD5kwKu4XThKJgAZvmQiM4dnRzYLtt+TpebzLdDBbnUwJa9ZEHFGb+OlRgdqAtSm2+RC3xOxCHT5VwqX1adu6Q8QowLZ5pWwhtu1fT7Gt5pZ3uWiS08UEBDqdnKwXzMFDFExvypRg/R6A26+KQjl2VonMmLpbH7r+bic1XdkpKgCpxa9EMMtwRB9VhCeEB1V83/KpQa9q+8WT+l6Mp6kVTkE1YHCGNtw/S7SAKQ4fQNpk0daHtoQ8wDmNuJKIphjeQS11fRf0GtHnPL+T0ObdqSt6f+7JJg22Nypvi0yhl6yFVl9cGQvldLfs8LJTi/IIpzX3NAv9ew5zTDf+f7U0FDgwVneqr3G6+Pxti50+gfUKToZEUhSOPkbAtO2J4dFT3LDAWJHFC4mG5tlne2ZaZeBMtef+3XccdLZkdEjXp0DrqxyjtUlblA9bnNrXewYyM'
@@ -6,3 +14,8 @@ token:
 ## ip주소 바꿔주기
 gateway:
   ip: 192.168.5.165
+
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception: 
+    order_is_empty: There is no item.

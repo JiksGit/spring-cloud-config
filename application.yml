@@ -1,0 +1,7 @@
+token:
+  expiration_time: 86400000
+  secret: 'defaultapplicationToken01234567890123456789012345678901234567890123456789112312'
+
+## ip주소 바꿔주기
+gateway:
+  ip: 192.168.5.165
